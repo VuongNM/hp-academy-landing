@@ -31,25 +31,26 @@
   /* ---------- Header ---------- */
   header {
     position: sticky; top: 0; z-index: 50;
-    background: rgba(58,58,60,.97);
-    color: #fff;
+    background: rgba(255,255,255,.97);
+    color: var(--charcoal);
+    box-shadow: 0 2px 12px rgba(0,0,0,.06);
   }
   .nav {
     display: flex; align-items: center; justify-content: space-between;
     padding: 14px 20px; max-width: 1080px; margin: 0 auto;
   }
-  .brand { font-weight: 800; letter-spacing: 2px; font-size: 1.15rem; }
+  .brand { font-weight: 800; letter-spacing: 2px; font-size: 1.15rem; color: var(--charcoal); }
   .brand span { color: var(--accent); }
   nav.menu { display: flex; gap: 22px; flex-wrap: wrap; }
   nav.menu a {
-    color: #fff; text-decoration: none; font-size: .85rem;
-    letter-spacing: 1.5px; text-transform: uppercase; opacity: .85;
+    color: var(--charcoal); text-decoration: none; font-size: .85rem;
+    letter-spacing: 1.5px; text-transform: uppercase; opacity: .7;
   }
   nav.menu a:hover { opacity: 1; color: var(--accent); }
 
   /* ---------- Hero ---------- */
   .hero {
-    background: linear-gradient(160deg, #3a3a3c 0%, #d34c15 55%, #f15e22 100%);
+    background: linear-gradient(135deg, #ff9459 0%, #f15e22 60%, #e8541b 100%);
     color: #fff;
     padding: 70px 20px 120px;
     position: relative;
@@ -187,13 +188,6 @@
   .why .card { border-top: none; border-left: 4px solid var(--accent); text-align: left; }
   .why .card .icon { font-size: 1.6rem; margin-bottom: 10px; }
 
-  /* ---------- Register ---------- */
-  .register {
-    background: linear-gradient(160deg, var(--charcoal) 0%, #6b3018 100%);
-    color: #fff;
-  }
-  .register .section-head h2 { color: #fff; }
-  .register .section-head .kicker { color: var(--accent); }
   .form-wrap {
     max-width: 640px; margin: 0 auto;
     background: #fff; color: var(--ink);
@@ -249,12 +243,13 @@
     text-transform: uppercase; color: var(--muted); margin-bottom: 22px;
   }
   .partner-logos { display: flex; align-items: center; justify-content: center; gap: 22px; flex-wrap: wrap; }
-  .partner-hp {
-    width: 60px; height: 60px; border-radius: 50%;
-    background: var(--charcoal); color: #fff;
-    display: grid; place-items: center;
-    font-weight: 800; letter-spacing: 1px; font-size: .95rem;
+  .partner-hp { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .partner-hp img { width: 42px; height: 42px; object-fit: contain; }
+  .partner-hp b {
+    font-size: 22px; font-weight: 800; letter-spacing: -.3px;
+    color: var(--charcoal);
   }
+  .partner-hp b span { color: var(--accent); }
   .partner-x { color: #c9c2ba; font-size: 22px; font-weight: 300; }
   .partner-aff { display: flex; align-items: center; gap: 10px; }
   .partner-aff img { width: 46px; height: 46px; object-fit: contain; }
@@ -273,7 +268,7 @@
 
   /* ---------- Contact / footer ---------- */
   footer {
-    background: #262628; color: #cfc9c3;
+    background: #2e2622; color: #d6cdc4;
     padding: 48px 0 28px; font-size: .92rem;
   }
   footer .cols {
@@ -536,14 +531,17 @@
 <section class="partner">
   <p class="partner-label">Đối tác chiến lược</p>
   <div class="partner-logos">
-    <span class="partner-hp">HP</span>
+    <a class="partner-hp" href="https://hpacademy.vn" target="_blank" rel="noopener">
+      <img src="hp-icon.png" alt="HP Academy">
+      <b>HP<span>ACADEMY</span></b>
+    </a>
     <span class="partner-x">✕</span>
     <span class="partner-aff">
       <img src="affluence-logo.png" alt="Affluence">
       <b>Affluence</b>
     </span>
   </div>
-  <p class="partner-desc">HP Academy hợp tác cùng <a href="https://affluence.vn" target="_blank" rel="noopener">Affluence</a> — nền tảng kết nối trường học &amp; mạng lưới marketers — nhằm mang chương trình học IELTS chất lượng đến gần hơn với phụ huynh và học viên.</p>
+  <p class="partner-desc"><a href="https://hpacademy.vn" target="_blank" rel="noopener" style="color:var(--accent-dark); font-weight:700;">HP Academy</a> hợp tác cùng <a href="https://affluence.vn" target="_blank" rel="noopener">Affluence</a> — nền tảng kết nối trường học &amp; mạng lưới marketers — nhằm mang chương trình học IELTS chất lượng đến gần hơn với phụ huynh và học viên.</p>
 </section>
 
 <!-- ============ FOOTER / CONTACT ============ -->
